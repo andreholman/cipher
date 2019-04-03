@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cipher</title>
+  
+  
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.1/css/all.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div id="wrapper">
+  <div id="box">
+    <h1>Andre's Cipher<br><span class="sub">Use this tool for encryption and decryption</span></h1>
+    
+    <div id="buttonwrapper">
+      <div class="switch">
+        <input id="cipher" type="radio" name="swap" checked="checked">
+        <label for="cipher">Cipher</label>
+        <input id="decode" type="radio" name="swap">
+        <label for="decode">Decode</label><span class="toggle-outside"><span class="toggle-inside"></span></span>
+      </div>
+    </div>
+    
+    <textarea placeholder="Input" id="input" oninput="process()"></textarea>
+    <div class="buttoncontainer">
+      <div class="button right">
+        <textarea placeholder="Key (256 bit)" id="key" oninput="process()"></textarea>
+        <i class="containericon fas fa-cogs fa-2x" id="generatebutton"></i>
+      </div>
+    </div>
+
+    <div class="buttoncontainer">
+      <div class="button left">
+        <i class="containericon fas fa-copy fa-2x" id="copybutton"></i>
+        <textarea placeholder="Output" readonly onclick="this.select()" id="output"></textarea>
+      </div>
+    </div>
+    <p id="result"><i class="far fa-check-circle"></i> Copied to clipboard!</p> <!-- Filled with default -->
+  </div>
+  <p id="footer">Designed by Andre Holman</p>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
